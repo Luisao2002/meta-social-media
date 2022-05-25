@@ -1,5 +1,7 @@
 const app = Vue.createApp({
-    template: '<h1>olá mundo</h1>',
+    data(){
+        return {
+            product: 'camisola'
+        }
+    }
 })
-
-app.mount('#app')
