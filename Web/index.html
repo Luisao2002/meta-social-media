@@ -58,19 +58,20 @@
             <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-            <div id="app">
-            <h2>{{product}} está em stock</h2>
-            </div>
-            <script src="https://unpkg.com/vue@next"></script>
+            <script src="https://unpkg.com/vue@3"></script>
+
+            <div id="app">{{ message }} é verde</div>
+            
             <script>
-                const app = Vue.createapp({
-                    data (){
-                        return{
-                            product: 'casaco'
-                        }
-                    }
-                })
-                const mountedApp = app.mount('#app')
+              const { createApp } = Vue
+            
+              createApp({
+                data() {
+                  return {
+                    message: 'casaco'
+                  }
+                }
+              }).mount('#app')
             </script>
     </body>
 </html>
